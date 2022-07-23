@@ -3,7 +3,7 @@
  * @Author: hairyOwl
  * @Date: 2022-07-07 21:29:07
  * @LastEditors: hairyOwl
- * @LastEditTime: 2022-07-23 17:31:43
+ * @LastEditTime: 2022-07-23 18:38:19
 -->
 <template>
   <div class="login-container">
@@ -14,18 +14,19 @@
       <!-- username -->
       <el-form-item>
         <span class="svg-container">
-          <svg-icon icon="https://res.lgdsunday.club/user.svg" />
+          <!-- <svg-icon icon="https://res.lgdsunday.club/user.svg" /> -->
+          <svg-icon icon="user" />
         </span>
         <el-input placeholder="username" name="username" type="text"></el-input>
       </el-form-item>
       <!-- password -->
       <el-form-item>
         <span class="svg-container">
-          <el-icon><avatar /></el-icon>
+          <svg-icon icon="password" />
         </span>
         <el-input placeholder="password" name="password"></el-input>
         <span class="show-pwd">
-          <el-icon><avatar /></el-icon>
+          <svg-icon icon="eye" />
         </span>
       </el-form-item>
       <!-- 登录按钮 -->
@@ -36,8 +37,6 @@
 
 <script setup>
 // script setup 导入的组件可以直接使用 不需要在component注册使用
-import SvgIcon from '@/components/SvgIcon/index.vue';
-import { Avatar } from '@element-plus/icons';
 </script>
 
 <style lang="scss" scoped>

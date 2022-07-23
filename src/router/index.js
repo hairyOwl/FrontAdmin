@@ -3,7 +3,7 @@
  * @Author: hairyOwl
  * @Date: 2022-07-07 12:10:13
  * @LastEditors: hairyOwl
- * @LastEditTime: 2022-07-23 10:38:33
+ * @LastEditTime: 2022-07-23 19:01:51
  */
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -19,7 +19,7 @@ const publicRoutes = [
   {
     path: '/test',
     name: 'test',
-    component: () => import(/* webpackChunkName: "login" */ '@/views/test.vue'),
+    component: () => import(/* webpackChunkName: "test" */ '@/views/test.vue'),
   },
 ];
 

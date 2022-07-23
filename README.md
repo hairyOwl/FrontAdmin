@@ -13,3 +13,4 @@ Vue3
 1. 编程规范（代码、Git 提交规范）
 2. 登录页面
    1. 导入 element-plus
+   2. SvgIcon 自定义组件处理 svg 显示
