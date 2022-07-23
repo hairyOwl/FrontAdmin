@@ -16,7 +16,7 @@ module.exports = {
       2,
       // 在什么情况下验证
       'always',
-      //泛型内容
+      // 泛型内容
       [
         'feat', // 新功能 feature
         'fix', // 修复 bug
@@ -27,11 +27,10 @@ module.exports = {
         'test', // 增加测试
         'chore', // 构建过程或辅助工具的变动
         'revert', // 回退
-        'build' // 打包
-      ]
+        'build', // 打包
+      ],
     ],
     // subject 大小写不做校验
-    'subject-case': [0]
-  }
-}
-
+    'subject-case': [0],
+  },
+};

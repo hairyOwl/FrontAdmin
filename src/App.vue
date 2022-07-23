@@ -1,26 +1,27 @@
+<!--
+ * @Description: 
+ * @Author: hairyOwl
+ * @Date: 2022-07-23 17:30:55
+ * @LastEditors: hairyOwl
+ * @LastEditTime: 2022-07-23 17:36:19
+-->
 <template>
   <router-view />
 </template>
 
-<style lang="scss">
+<script>
+export default {
+  name: 'App',
+};
+</script>
+
+<style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  margin-top: 60px;
 }
 </style>
