@@ -3,7 +3,7 @@
  * @Author: hairyOwl
  * @Date: 2022-06-29 10:57:27
  * @LastEditors: hairyOwl
- * @LastEditTime: 2022-07-23 17:35:47
+ * @LastEditTime: 2022-07-24 17:19:32
  */
 module.exports = {
   root: true,
@@ -24,5 +24,6 @@ module.exports = {
     'spaced-comment': 'off',
     'import/prefer-default-export': 'off',
     'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
+    'arrow-body-style': 'off',
   },
 };

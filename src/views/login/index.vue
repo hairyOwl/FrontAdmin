@@ -3,28 +3,33 @@
  * @Author: hairyOwl
  * @Date: 2022-07-07 21:29:07
  * @LastEditors: hairyOwl
- * @LastEditTime: 2022-07-23 18:38:19
+ * @LastEditTime: 2022-07-24 17:14:38
 -->
 <template>
   <div class="login-container">
-    <el-form class="login-form">
+    <el-form class="login-form" :model="loginForm" :rules="loginRules">
       <div class="title-container">
         <h3 class="title">用户登录</h3>
       </div>
       <!-- username -->
-      <el-form-item>
+      <el-form-item prop="username">
         <span class="svg-container">
           <!-- <svg-icon icon="https://res.lgdsunday.club/user.svg" /> -->
           <svg-icon icon="user" />
         </span>
-        <el-input placeholder="username" name="username" type="text"></el-input>
+        <el-input
+          placeholder="username"
+          name="username"
+          type="text"
+          v-model="loginForm.username"
+        ></el-input>
       </el-form-item>
       <!-- password -->
-      <el-form-item>
+      <el-form-item prop="password">
         <span class="svg-container">
           <svg-icon icon="password" />
         </span>
-        <el-input placeholder="password" name="password"></el-input>
+        <el-input placeholder="password" name="password" v-model="loginForm.password"></el-input>
         <span class="show-pwd">
           <svg-icon icon="eye" />
         </span>
@@ -36,7 +41,34 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import { validatePassword } from './rules';
 // script setup 导入的组件可以直接使用 不需要在component注册使用
+// 1.  为 el-form 绑定 model 属性
+// 数据源
+const loginForm = ref({
+  username: 'super-admin',
+  password: '123456',
+});
+// 2.  为 el-form 绑定 rules 属性
+// 验证规则
+const loginRules = ref({
+  username: [
+    {
+      required: true,
+      trigger: 'blur', //验证触发时机为，失去焦点
+      message: '用户名称为必填项',
+    },
+  ],
+  password: [
+    {
+      required: true,
+      trigger: 'blur',
+      validator: validatePassword(),
+    },
+  ],
+});
+// 3.  为 el-form-item 绑定 prop 属性
 </script>
 
 <style lang="scss" scoped>
